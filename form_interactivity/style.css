@@ -1,0 +1,229 @@
+/*This is a basic reset to remove default browser spacing*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General stlying for the page */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f8fb;
+  color: #1f2933;
+}
+
+/* Header stlying */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #005ea5;
+  color: white;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/*Text for the sites title*/
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+/*Desktop navigation*/
+.nav {
+  display: flex;
+  gap: 20px;
+}
+/*Navigation links*/
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav a:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+/*When cursor is hovering over a link, the writing becomes underlined for identification*/
+.nav a:hover {
+  text-decoration: underline;
+}
+/*Menu is hidden on desktop, but shown on smaller screens*/
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.menu-toggle:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Hero/banner section for stlying, which include pulling an image from the web */
+.hero {
+  background: linear-gradient(rgba(0, 94, 165, 0.85), rgba(0, 94, 165, 0.85)),
+    url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80")
+    center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+/*This ensure the hero text does not stretch too wide*/
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Shared button style used across the site to keep buttons consistent */
+.btn {
+  display: inline-block;
+  background-color: #00a3e0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+/*SLight change in colour when hovered over*/
+.btn:hover {
+  background-color: #008cc2;
+}
+
+
+/* General section spacing and width */
+.section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+/*Main heading for each section*/
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #005ea5;
+}
+
+/* Styling for each card */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #005ea5;
+}
+
+/* Shared form container styling */
+.form {
+  background-color: white;
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+/*Labels that are displayed above form inputs*/
+.form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+/* Styles input boxes and text area */
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #cbd2d9;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Maintains consistnecy for checkboxes and labels */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+/* Stops checkbox from stretching */
+.checkbox-group input {
+  width: auto;
+  margin-bottom: 0;
+}
+
+/* Message area used for validation feedback */
+.message {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #003d6b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Responsive changes for smaller devices such as phones and tablets */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hides the menu by defult on smaller screens */
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background-color: #005ea5;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+  }
+
+  /* JavaScript adds this class to show the menu */
+  .nav.show {
+    display: flex;
+  }
+
+  /* Stacks cards on smaller screens */
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
