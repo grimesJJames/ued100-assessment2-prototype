@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--The basic page setup-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--This is the title that will be displayed in the browers tab-->
+  <title>myGov Prototype</title>
+  <!--This links the HTML page to the CSS file-->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--This is the header section with the title of the site and navigation-->
+  <header class="header">
+    <div class="logo">myGov Prototype</div>
+
+    <!--Main navigation links for the website-->
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#login">Login</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero/banner Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Simple and Secure Government Access</h1>
+      <p>
+        This prototype demonstrates a clean and accessible user interface inspired by
+        the myGov website, using HTML, CSS and JavaScript.
+      </p>
+      <a href="#login" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <!-- This is the services section, that shows examples of linked government services -->
+  <section class="section" id="services">
+    <h2>Available Services</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Medicare</h3>
+        <p>Access health-related services and information securely.</p>
+      </div>
+      <div class="card">
+        <h3>Centrelink</h3>
+        <p>Manage payments, claims and account details online.</p>
+      </div>
+      <div class="card">
+        <h3>ATO</h3>
+        <p>View tax information and connect to online tax services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Login form section -->
+  <section class="section login-section" id="login">
+    <h2>Login</h2>
+    <form class="form">
+      <label for="email">Email address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+      />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+      />
+
+      <button type="submit" class="btn">Sign In</button>
+    </form>
+  </section>
+
+  <!-- Contact form section -->
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form class="form">
+      <label for="name">Full name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+      />
+
+      <label for="contactEmail">Email address</label>
+      <input
+        type="email"
+        id="contactEmail"
+        name="contactEmail"
+        placeholder="Enter your email"
+      />
+
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Type your message here"
+      ></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer of the site -->
+  <footer class="footer">
+    <p>UED100 User Experience Design - Assessment 2 Prototype</p>
+  </footer>
+
+  <!--This links the page to the JavaScript file-->
+  <script src="script.js"></script>
+</body>
+</html>
